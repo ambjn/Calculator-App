@@ -10,8 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var userQuestion = '';
-  var userAnswer = '';
+  var previousOperand = '';
+  var currentOperand = '';
 
   final List<String> buttons = [
     'C',
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                   alignment: Alignment.centerRight,
                   child: Text(
-                    userQuestion,
+                    previousOperand,
                     style: const TextStyle(fontSize: 55, color: Colors.black87),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
                     alignment: Alignment.centerRight,
                     child: Text(
-                      userAnswer,
+                      currentOperand,
                       style: const TextStyle(fontSize: 40, color: Colors.black),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
@@ -91,8 +91,8 @@ class _HomePageState extends State<HomePage> {
                           return CustomButton(
                               buttonTapped: () {
                                 setState(() {
-                                  userQuestion = '';
-                                  userAnswer = '';
+                                  previousOperand = '';
+                                  currentOperand = '';
                                 });
                               },
                               buttonText: buttons[index],
@@ -104,8 +104,8 @@ class _HomePageState extends State<HomePage> {
                           return CustomButton(
                               buttonTapped: () {
                                 setState(() {
-                                  userQuestion = userQuestion.substring(
-                                      0, userQuestion.length - 1);
+                                  previousOperand = previousOperand.substring(
+                                      0, previousOperand.length - 1);
                                 });
                               },
                               buttonText: buttons[index],
@@ -127,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                           return CustomButton(
                             buttonTapped: () {
                               setState(() {
-                                userQuestion += buttons[index];
+                                previousOperand += buttons[index];
                               });
                             },
                             buttonText: buttons[index],
@@ -153,13 +153,13 @@ class _HomePageState extends State<HomePage> {
   }
 
   void equalPressed() {
-    String finalQuestion = userQuestion;
-    finalQuestion = finalQuestion.replaceAll('x', '*');
+    String finalOperand = previousOperand;
+    finalOperand = finalOperand.replaceAll('x', '*');
     Parser p = Parser();
-    Expression exp = p.parse(finalQuestion);
+    Expression exp = p.parse(finalOperand);
     ContextModel cm = ContextModel();
     double eval = exp.evaluate(EvaluationType.REAL, cm);
 
-    userAnswer = eval.toString();
+    currentOperand = eval.toString();
   }
 }
