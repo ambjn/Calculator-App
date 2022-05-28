@@ -8,4 +8,5 @@
 
 ### Screenshots:
 
-<img src = screenshot/1.png alt='screenshot-of-app' width="500" height="500">
+<center> <img src = screenshot/1.png alt='screenshot-of-app'>
+</center>
