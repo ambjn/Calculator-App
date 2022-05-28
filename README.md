@@ -6,7 +6,6 @@
 <li> math_expressions: ^2.3.0</li>
 </ul>
 
-<<<<<<< HEAD
 ## About:
 
 An elegant UI Calculator App.
