@@ -38,8 +38,7 @@ In the command terminal, run the following commands:
     Run the following command in your terminal.
     $ flutter run
 
-=======
->>>>>>> 2424c9505e745a71b4092f803d6d5175153a89b2
+
 ### Screenshots:
 
 <center> <img src = screenshot/1.png alt='screenshot-of-app'> </center>
