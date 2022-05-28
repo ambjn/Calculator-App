@@ -3,7 +3,7 @@
 
 ## About:
 
-An elegant UI Calculator App. <br>
+Calculator App with an elegant looking UI. <br>
 No need for brackets, app follows BODMAS principles.
 
 ## Packages:
