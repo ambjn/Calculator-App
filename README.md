@@ -16,7 +16,7 @@ No need for brackets, app follows BODMAS principles.
 In the command terminal, run the following commands:
 
     $ git clone https://github.com/ambjn/Calculator-App.git
-    $ cd FlutterCardSwipe/animation_exp
+    $ cd Calculator-App
     $ flutter run
 
 # Simulate for iOS:
