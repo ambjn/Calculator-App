@@ -13,6 +13,18 @@ class _HomePageState extends State<HomePage> {
   var currentOperand = '';
 
   final List<String> buttons = [
+    /* 
+      
+    Visual Representation:
+
+    'C', 'DEL', '%', '/',
+    '7', '8',   '9', 'x',
+    '4', '5',   '6', '-',
+    '1', '2',   '3', '+',
+    '0', '00',  '.', '=',
+
+     */
+
     'C',
     'DEL',
     '%',
@@ -79,6 +91,7 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.deepPurple[200],
                     borderRadius: BorderRadius.circular(20),
                   ),
+                  // Using GridView.builder to create layout of calculator
                   child: GridView.builder(
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
@@ -151,9 +164,13 @@ class _HomePageState extends State<HomePage> {
     return false;
   }
 
+  // Function for equalPressed
+
   void equalPressed() {
+    // Replace * with x
     String finalOperand = previousOperand;
     finalOperand = finalOperand.replaceAll('x', '*');
+
     Parser p = Parser();
     Expression exp = p.parse(finalOperand);
     ContextModel cm = ContextModel();
