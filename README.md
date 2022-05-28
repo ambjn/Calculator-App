@@ -1,7 +1,7 @@
 # Calculator App Using Flutter
 
-## Packages
+## Packages:
 
-<ol>
+<ul>
 <li> math_expressions: ^2.3.0</li>
-</ol>
+</ul>
