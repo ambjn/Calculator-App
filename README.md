@@ -1,15 +1,16 @@
 # Calculator App Using Flutter
 
-## Packages:
-
-<ul>
-<li> math_expressions: ^2.3.0</li>
-</ul>
 
 ## About:
 
 An elegant UI Calculator App.
 No need for brackets, app follows BODMAS principles.
+
+## Packages:
+
+<ul>
+<li> math_expressions: ^2.3.0</li>
+</ul>
 
 #### Installation:
 
